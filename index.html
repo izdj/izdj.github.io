@@ -1,0 +1,726 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="" />
+	    <link rel="bookmark" href="" />
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 14px/1.42858 "microsoft yahei", "Simsun", "arial, helvetica, sans-serif";
+	color: #fff;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+#geturl  input{
+	top: 0px;
+	width: 440px;
+	height: 90px;
+	font-size: 40px;
+}
+#geturl  button{
+	top: 0px;
+	width: 100px;
+	height: 90px;
+	font-size: 40px;
+}
+
+#geturl a{
+	margin: 2px 10px 2px 10px;
+	color: #666;
+	width: 150px;
+	//line-height: 50px;
+	height: 90px;
+	font-size: 40px;
+}
+#geturl img{
+	margin: 2px 10px 2px 10px;
+	color: #666;
+	//width: 600px;
+	//line-height: 50px;
+	//height: 400px;
+	font-size: 40px;
+	background: #666;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 5px;
+}
+#addaddress {
+				position: relative;
+				padding: 1px 20px 5px 0px ;
+				width: 70px;
+				height: 70px;
+				display: block;
+				background: #D53939;
+				//margin: 80px auto;	
+				//font-size: 60px;				
+				color: #fff;
+				//line-height: 62px;
+				border-radius: 3px;
+				cursor: pointer;
+				//text-decoration: none;
+				
+				
+}
+			
+#addaddress a {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				font-size: 0;
+}
+#videoall {
+	width: 100%;
+	background: #333;
+	margin-top: 0px;
+	overflow: hidden;
+	*zoom: 1;
+	position: relative;
+	z-index: 1;
+}
+#line {
+//display: block;
+//position: fixed;
+left: 0px;
+top: 0px;
+padding: 0px;
+width: 100%;
+height: 25px;
+background: #333;
+//-moz-border-radius: 0px;
+//-webkit-border-radius: 0px;
+//border-radius: 0px;
+//filter: alpha(opacity=70);
+//-moz-opacity: 0.7; 
+//-khtml-opacity: 0.7; 
+//opacity: 0.7;
+padding: 0 1px;
+}
+#urlbook {
+	float: left;
+	//position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 0;
+	top: 0;
+	margin: 2px 1px 2px 1px;
+	font-size: 12px;
+	line-height: 20px;
+	background: #D53939;
+	color: #fff;
+	border-radius: 3px;
+	display: block;			
+	cursor: pointer;
+	text-decoration: none;	
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7; 
+	-khtml-opacity: 0.7; 
+	opacity: 0.7;
+	//padding: 0 1px;		
+}
+#urlbook a {
+	//float: left;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 0;
+	top: 0;
+	margin: 2px auto 2px 1px;
+	font-size: 0;
+}
+#urlroute {
+	float: left;
+	overflow:hidden;
+	//position: relative;
+	//width: 70%;
+	//height: 20px;
+	//margin: 2px 1px 2px 1px;	
+	//font-size: 8px;
+	//line-height: 20px;	
+	//background: #666;
+	//color: #fff;
+	//border-radius: 3px;
+	//display: block;	
+	//cursor: pointer;
+	//text-decoration: none;
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7; 
+	-khtml-opacity: 0.7; 
+	opacity: 0.7;
+	//padding: 0 1px;
+}
+#urlroute #newroutecss {
+	float: left;
+	line-height: 20px;
+	color: #B7B7B7;
+	background: #666;
+	margin: 2px 2px 2px 2px;
+	font-size: 12px;
+	border-radius: 3px;
+	display: inline-block;			
+	cursor: pointer;
+	text-decoration: none;	
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7; 
+	-khtml-opacity: 0.7; 
+	opacity: 0.7;
+}
+
+#urlroute #newroutecss:hover {
+	color: #FF920B;
+}
+
+#urlroute #defaultroutecss {
+	float: left;
+	line-height: 20px;
+	color: #FF920B;
+	background: #666;
+	margin: 2px 2px 2px 2px;
+	font-size: 12px;
+	border-radius: 3px;
+	display: inline-block;			
+	cursor: pointer;
+	text-decoration: none;	
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7; 
+	-khtml-opacity: 0.7; 
+	opacity: 0.7;
+}
+
+#urlroute #defaultroutecss:hover {
+	color: #FF920B;
+}
+#urlqr {
+	float: left;
+	//position: relative;
+	width: 20px;
+	height: 20px;
+	margin: 2px 0px 2px 0px;	
+	font-size: 12px;
+	line-height: 20px;	
+	background: #3B9DD6;
+	color: #fff;
+	border-radius: 3px;
+	display: block;	
+	cursor: pointer;
+	text-decoration: none;
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7; 
+	-khtml-opacity: 0.7; 
+	opacity: 0.7;
+	//padding: 0 1px;
+}
+#divtitle {
+	overflow:hidden;	
+	float: left;
+	width: 20%;
+	height: 20px;
+	margin: 2px 1px 2px 1px;
+	font-size: 12px;
+	line-height: 20px;
+	background: #666;
+	border-radius: 3px;
+	display: block;
+	cursor: pointer;
+	text-decoration: none;
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7; 
+	-khtml-opacity: 0.7; 
+	opacity: 0.7;
+	//padding: 0 1px;	
+}	
+#thisqr {
+display: block;
+position: fixed;
+left: 1%;
+top: 40px;
+padding: 5px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+background: #3B9DD6;
+color: #E8E8E8;
+//bottom: 0px;
+}
+#player{
+background: #000;
+}
+#noads {
+display: block;
+position: fixed;
+width=100%;
+left: 0px;
+bottom: 0px;
+padding: 0px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+background: #3B9DD6;
+color: #E8E8E8;
+}
+</style>
+	</head>
+	<body>
+	<center>
+<div id="geturl" style="display:none">
+<form id="form1"><input type="text" name="url" placeholder="请输入网址"> <button onclick='urlbutton()'>提交</button></form>
+<h1 style="color: #f00">支持下列网站:</h1><br>
+	<div style="display:none" id="addaddress" title="拖动保存到书签/收藏夹,看视频时候点击可直接观看.">
+			<img src="favorite.png" height="60px" width="60px"/>
+			<a id="addbook" href="">vip</a>
+	</div>
+<a href="https://v.qq.com/" target="_blank">腾讯视频</a> 
+<a href="https://www.youku.com/" target="_blank">优酷视频</a>
+<a href="https://www.iqiyi.com/" target="_blank">爱奇艺 </a>
+<a href="https://www.mgtv.com/" target="_blank">芒果TV</a><br>
+
+<a href="https://tv.sohu.com/" target="_blank">搜狐视频</a>
+<a href="https://www.pptv.com/" target="_blank">PP视频 </a>
+<a href="https://www.le.com/" target="_blank">乐视网 </a>
+<a style="color: #006">......</a><br>
+<a style="color: #f00">仅供学习,切勿外传.</a><br>
+<a style="color: #00f">点击图片直接学习使用教程</a><br>
+<a onclick='urlimg()'><img id="studypic" src="pic.jpg"/></a><br>
+</div>
+	
+	<div id="videoall">
+		<div id="line">
+			<div id="urlbook" title="拖动保存到书签/收藏夹,看视频时候点击可直接观看."><img src="favorite.png" height="20px" width="20px"/> 
+			<a id="addbook2" href="">vip</a>
+			</div>
+			<div id="urlqr" onclick='showqr()'title="点击此处显示/隐藏二维码"><img src="localhost.jpg" height="20px" width="20px"/></div>
+					<div id="divtitle">					
+					<a href="" target="_self" id="newhref" title=""><h3 id="zmytitle" class="video-title">vip</h3></a>					
+					</div>
+						<div id="urlroute">线路</div>
+		</div>
+		<div id="thisqr" style="display:none">	
+			<div id="outqr"></div>
+			<script src="jquery.js"></script>
+			<script type="text/javascript" src="qr/jquery.qrcode.min.js"></script>
+			<script>
+			jQuery(function(){
+			url = window.location.href
+			jQuery('#outqr').qrcode(url);
+			})
+			</script>
+		</div>		
+		<iframe src="" style="width:100%;height:540px" id="player" allowtransparency="true" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+		<div id="noads"  style="display:none"><img src="black.jpg" border="0" width="1000%" height="400px"><div>
+	</div>
+<script type="text/javascript">
+function urlimg() {
+var dotimg=".jpg";
+var navigatorplatform = navigator.platform;
+	if ((navigator.platform == "Win32") || (navigator.platform == "Windows") || (navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel")){
+	imgfolder="pc"+"/";
+	maximg=8;
+	}
+	else
+	{
+	imgfolder="m"+"/";
+	maximg=8;
+	}
+//alert(document.getElementById("studypic").src);
+	if (document.getElementById("studypic").src.indexOf('pic.jpg')>0){
+	//alert("开始学习!");
+	id=1;
+	document.getElementById("studypic").src=document.getElementById("studypic").src.replace("pic.jpg",imgfolder+id+dotimg);
+	}
+	else{
+	id=geturiQueryString(document.getElementById("studypic").src,imgfolder,dotimg);
+		if (id==maximg){
+		newid=1;
+		alert("学习完毕!");
+		}
+		else{
+		newid=parseInt(id,10)+1;
+		}
+	//alert(newid);
+	document.getElementById("studypic").src=document.getElementById("studypic").src.replace(imgfolder+id+dotimg,imgfolder+newid+dotimg);
+	}
+}
+
+function urlbutton() {
+document.getElementsByTagName('input')[0].value=encodeURIComponent(document.getElementsByTagName('input')[0].value);
+document.getElementsByTagName('input')[0].action="";                //设置提交路径
+document.getElementsByTagName('input')[0].submit(); 
+}
+
+function getQueryString(name) { 
+var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+var r = window.location.search.substr(1).match(reg); 
+if (r != null) return unescape(r[2]); return null; 
+}
+
+function geturiQueryString(String,name1,name2) {
+number1=String.indexOf(name1);
+length1=name1.length;
+start1=number1+length1;
+lenString=String.length;
+	if(name2==""){	
+	var name=String.substr(start1, lenString-start1);
+	}
+	else{
+	var name=String.substr(start1, String.indexOf(name2,number1)-start1);
+	}
+return name;
+}
+
+function showqr() {
+if(document.getElementById("thisqr").style.display=="none" ){document.getElementById("thisqr").style.display="block";}
+else {document.getElementById("thisqr").style.display="none";}
+}
+</script>
+
+<script type="text/javascript">
+urlkey=decodeURIComponent(window.location.search.substr(1))
+//alert(urlkey);
+lenurlkey=urlkey.length
+//alert(lenurlkey);
+//alert(window.location.href.indexOf('?'));
+if (window.location.href.indexOf('?')>0){
+zdjdomain=window.location.href.substr(0, window.location.href.indexOf('?'));
+}
+else
+{
+zdjdomain=window.location.href;
+}
+document.getElementById('addbook').href="javascript: (function() { url=window.location.href; title=document.title; base_url='"+zdjdomain+"'; _url=base_url+'?title='+title+'&url='+url; if (url.indexOf(base_url)<0){ window.location.href=_url;} else {window.location.href=url;} })();";
+document.getElementById('addbook').innerText=zdjdomain	
+document.getElementById('addbook2').href="javascript: (function() { url=window.location.href; title=document.title; base_url='"+zdjdomain+"'; _url=base_url+'?title='+title+'&url='+url; if (url.indexOf(base_url)<0){ window.location.href=_url;} else {window.location.href=url;} })();";
+document.getElementById('addbook2').innerText=zdjdomain
+if (lenurlkey==0){
+document.getElementById("videoall").style.display="none";
+document.getElementById("geturl").style.display="block";
+	if ((navigator.platform == "Win32") || (navigator.platform == "Windows") || (navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel")){
+		if (window.location.protocol=="https:"){
+		document.getElementById('addaddress').style.display="block";
+		}
+	}
+}
+else{
+var navigatoruserAgent = navigator.userAgent;
+var navigatorplatform = navigator.platform;
+	//alert(document.body.clientHeight);
+	//alert(document.body.scrollHeight);
+	//alert(document.body.offsetHeight);
+	//alert(document.getElementById('line').offsetHeight);
+	pxmargin=document.getElementById('line').offsetHeight;//document.body.scrollHeight-document.getElementById('player').style.height.replace("px","");
+	//alert(pxmargin);
+	document.getElementById('player').style.height=document.body.offsetHeight-pxmargin+ "px";
+	//alert(document.getElementById('player').style.height);
+//var isWin = (navigator.platform == "Win32") || (navigator.platform == "Windows");  
+//var isMac = (navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel"); 
+if ((navigator.platform == "Win32") || (navigator.platform == "Windows") || (navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel")){
+	if (window.location.protocol=="https:"){
+		pxurlbook=20+2;
+		pxurlqr=20+2;
+		pxrestpart=document.body.scrollWidth-pxurlbook-pxurlqr-2-2;
+		document.getElementById('urlbook').style.width=pxurlbook+"px";
+		document.getElementById('addbook').style.width=pxurlbook+"px";
+		document.getElementById('urlqr').style.width=pxurlqr+"px";
+		document.getElementById('divtitle').style.width=pxrestpart*0.2+"px";	
+		document.getElementById('urlroute').style.width=pxrestpart*0.8+"px";	
+	}
+	else{
+		pxurlbook=0;
+		pxurlqr=20+2;
+		pxrestpart=document.body.scrollWidth-pxurlbook-pxurlqr-2-2;
+		document.getElementById('urlbook').style.display="none";
+		document.getElementById('addbook').style.display="none";
+		document.getElementById('urlqr').style.width=pxurlqr+"px";
+		document.getElementById('divtitle').style.width=pxrestpart*0.2+"px";	
+		document.getElementById('urlroute').style.width=pxrestpart*0.8+"px";	
+	}
+}
+else{
+//pxmargin=0;
+//document.getElementById('player').style.height=document.body.offsetHeight-pxmargin+ "px";
+pxrestpart=document.body.scrollWidth-2-2;
+document.getElementById('urlbook').style.display="none";
+document.getElementById('addbook').style.display="none";
+document.getElementById('urlqr').style.display="none";
+document.getElementById('divtitle').style.width=pxrestpart*0.2+"px";	
+document.getElementById('urlroute').style.width=pxrestpart*0.8+"px";
+	
+}
+	if (urlkey.indexOf('?')<0){
+	newurl=decodeURIComponent(getQueryString("url"));
+	}
+	else
+	{
+	newurl=geturiQueryString(urlkey,"url=","");
+	}
+	if (newurl=="null" || newurl.length==0){
+	window.location.href=zdjdomain;//window.location.protocol+"//"+window.location.hostname;
+	}	
+	//alert(newurl);
+	
+	//tencenturl
+	if (newurl.indexOf('v.qq')>0 && newurl.indexOf('vid')>0){
+	newurl=newurl+"&"		
+		if (newurl.indexOf('cid')>0){
+		newurl="https://v.qq.com/x/cover/"+geturiQueryString(newurl,"cid=","&")+"/"+geturiQueryString(newurl,"vid=","&")+".html";
+		}
+		else if (newurl.indexOf('coverid')>0){
+		newurl="https://v.qq.com/x/cover/"+geturiQueryString(newurl,"coverid=","&")+"/"+geturiQueryString(newurl,"vid=","&")+".html";
+		}
+		else {
+		//alert(newurl.substr(0, newurl.indexOf("?")).replace(".html","/"+geturiQueryString(newurl,"vid=","&")+".html"));
+		newurl=newurl.substr(0, newurl.indexOf("?")).replace(".html","/"+geturiQueryString(newurl,"vid=","&")+".html");
+		}
+	}
+	
+	//youkuurl
+	if (newurl.indexOf('m.youku.com')>0 && newurl.indexOf('video')>0 && newurl.indexOf('id_')>0){
+	newurl=newurl+"&"
+	newurl="https://v.youku.com/v_show/id_"+geturiQueryString(newurl,"id_",".html").replace(/=/g,"")+".html";
+	}
+	
+	//iqiyiurl
+	if (newurl.indexOf('m.iqiyi.com')>0 && newurl.indexOf('v_')>0){
+	newurl=newurl+"&"
+	newurl="https://www.iqiyi.com/v_"+geturiQueryString(newurl,"v_",".html")+".html";
+	}
+	
+	//leurl
+	if (newurl.indexOf('m.le.com')>0 && newurl.indexOf('vplay_')>0){
+	newurl=newurl+"&"
+	newurl="http://www.le.com/ptv/vplay/"+geturiQueryString(newurl,"vplay_",".html")+".html";
+	}
+	
+	//mgtvurl
+	if (newurl.indexOf('m.mgtv.com')>0){
+	newurl=newurl.replace("m.mgtv.com","www.mgtv.com");	
+	}
+	
+	//sohuurl
+	if (newurl.indexOf('m.tv.sohu.com')>0){
+	newurl=newurl.replace("m.tv.sohu.com","tv.sohu.com");	
+	}
+	
+	//pptvurl
+	if (newurl.indexOf('m.pptv.com')>0){
+	newurl=newurl.replace("m.pptv.com","v.pptv.com");	
+	}
+	
+	document.getElementById('newhref').href=newurl;
+
+	//alert(urlkey.indexOf('title='));
+	if (urlkey.indexOf('title=')<0){
+	newtitle=newurl;
+	}
+	else{
+	newtitle=geturiQueryString(urlkey,"title=","&");
+	}
+	//alert(newtitle);
+	document.title=newtitle;
+	document.getElementById('newhref').innerText=newtitle;
+	document.getElementById('newhref').title=newtitle;
+		
+	if (newurl.indexOf('pptv')<0){
+	urldomain=newurl.substr(0, newurl.indexOf('/',newurl.indexOf('//')+('//').length+('/').length)+1);
+	}
+	else{
+	urldomain="http://sr1.pplive.com/mcms/nav/images/"
+	}
+	var urlico=document.getElementsByTagName('link');
+	//alert(urlico[0].getAttribute('href'));
+	urlico[0].href=urldomain+"favicon.ico";
+	//alert(urlico[0].href);
+	urlico[1].href=urldomain+"favicon.ico";
+	
+
+}
+//alert(window.location.search.substr(1).split(":"));
+</script>
+<script type="text/javascript">
+	if (window.location.protocol=="https:"){
+		if ((navigator.platform == "Win32") || (navigator.platform == "Windows") || (navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel")){
+	showroute=8;
+		}else{
+	showroute=3;
+		}
+	newprotocolurl="http:"+window.location.href.substring(window.location.protocol.length);
+	newline="<a href="+newprotocolurl+" target='_self' id='newroutecss'>普通线路</a>";
+	defaultdline=newline;	
+	}
+	else{
+		if ((navigator.platform == "Win32") || (navigator.platform == "Windows") || (navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel")){
+	showroute=7;
+		}else{
+	showroute=7;
+		}
+	newprotocolurl="https:"+window.location.href.substring(window.location.protocol.length);
+	newline="<a href="+newprotocolurl+" target='_self' id='newroutecss'>加密线路</a>";
+	defaultdline=newline;	
+	}
+if (document.getElementById('urlroute').innerHTML=="线路"){
+newroute(newurl,1);
+}
+
+function newroute(num,newdefault,ssl) {
+if (window.location.protocol=="https:"){
+	if (num==1){
+	base_url="https://api.pangujiexi.com/player.php?url=";//youku=first
+	znum=num;
+	}
+	else if (num==2){	
+	base_url="https://player.baodai.org/ipsign/player.php?v=";//mads="hidden";//qq=first 
+	znum=num;
+	}
+	else if (num==3){
+	base_url="https://jiexi.071811.cc/jx.php?url=";//mads=num;	
+	znum=num;
+	}
+	else if (num==4){
+	base_url="https://qmyouku.duapp.com/index.php?url=";//mads="hidden";
+	znum=num;
+	}
+	else if (num==5){
+	base_url="https://jx.618g.com/?url="; //mads=num;
+	znum=num;
+	}
+	else if (num==6){
+	base_url="https://api.daidaitv.com/index/?url=";//mads=num;
+	znum=num;
+	}
+	else if (num==7){
+	base_url="https://www.014670.cn/2018/222.php?url=";//mads=num;
+	znum=num;
+	}
+	else if (num==8){
+	base_url="https://api.gagaliu.com/sq/?url=";//mads=num;
+	znum=num;
+	}
+	else if (num==9){
+	base_url="https://1717ty.duapp.com/ty.php?url=";//mads=num;
+	znum=num;
+	}
+	else if (num.indexOf('qq')>0){
+	base_url="https://api.pangujiexi.com/player.php?url=";//f
+	znum=1;
+	}
+	else if (num.indexOf('youku')>0){
+	base_url="https://api.pangujiexi.com/player.php?url=";//f
+	znum=1;
+	}
+	else{
+	base_url="https://api.pangujiexi.com/player.php?url=";//f
+	znum=1;
+	} 
+}
+else{
+	if (num==1){
+	base_url="http://api.xfsub.com/index.php?url=";	
+	znum=num;
+	}
+	else if (num==2){
+	base_url="http://www.82190555.com/video.php?url=";//mads="hidden";
+	znum=num;
+	}
+	else if (num==3){
+	base_url="http://qtv.soshane.com/ko.php?url=";//mads="hidden";
+	znum=num;
+	}
+	else if (num==4){
+	base_url="http://api.51ckm.com/jx.php?url=";//mads="hidden";
+	znum=num;
+	}
+	else if (num==5){
+	base_url="http://pan.7cyd.com/?url=";//mads="hidden";
+	znum=num;
+	}
+	else if (num==6){
+	base_url="http://jx.api.163ren.com/vod.php?url=";//mads=num;
+	znum=num;
+	}
+	else if (num==7){
+	base_url="http://yun.baiyug.cn/vip/?url=";//mads=num;
+	znum=num;
+	}
+else if (num==8){
+base_url="http://jx.myxit.cn/vip/?url=";//mads="hidden";pangujiexi
+znum=num;
+}
+else if (num==9){
+base_url="http://lookxw.com/yingzi/?url=";//gzh
+znum=num;
+}
+else if (num==10){
+base_url="https://47ksvip.duapp.com/qq1.php?url=";//i
+znum=num;
+}
+else if (num==11){
+base_url="http://www.662820.com/xnflv/index.php?url=";//f
+znum=num;
+}
+else if (num==12){
+base_url="http://jx.maoyun.tv/?url=";//f
+znum=num;
+}
+else if (num==13){
+base_url="https://yooomm.com/index.php?url=";//f
+znum=num;
+}
+else if (num==14){
+base_url="http://y.mt2t.com/lines/?url=";//f
+znum=num;
+}
+else if (num==15){
+base_url="https://api.vparse.org/?url=";//i
+znum=num;
+}
+else if (num==16){
+base_url="https://souzhi.duapp.com/jx/1.php?url=";//f
+znum=num;
+}
+else if (num==17){
+base_url="http://api.wlzhan.com/sudu/?url=";//mads="hidden";
+znum=num;
+}
+	else{
+	base_url="http://api.xfsub.com/index.php?url=";//f
+	znum=1;
+	}
+}
+//alert(base_url);
+//alert(znum);
+newline=defaultdline;
+for(var i=1;i<=showroute;i++){
+	if (i<10){
+	newi="0"+i;
+	}
+	else{
+	newi=i;
+	}
+		if (znum==i){
+			if (newdefault==1){
+			newline=newline+"<a href='javascript:void(0);' onclick='newroute("+i+",0)' id='defaultroutecss'>默认"+newi+"</a>";
+			newdefault=0;
+			}
+			else{
+			newline=newline+"<a href='javascript:void(0);' onclick='newroute("+i+",0)' id='defaultroutecss'>当前"+newi+"</a>";
+			}
+		}
+		else{
+			//if ((navigator.platform == "Win32") || (navigator.platform == "Windows") || (navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel")){
+			newline=newline+"<a href='javascript:void(0);' onclick='newroute("+i+",0)' id='newroutecss'>线路"+newi+"</a>";
+			//}
+		}
+}
+document.getElementById('urlroute').innerHTML=newline;
+document.getElementById('player').src=base_url+newurl;
+}
+</script>
+	</center>
+	</body>
+</html>
